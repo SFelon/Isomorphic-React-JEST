@@ -2,15 +2,16 @@ import React from 'react';
 import QuestionList from './components/QuestionList'
 import QuestionDetail from './components/QuestionDetail'
 import { connect } from 'react-redux';
+import NotificationViewer from './components/NotificationViewer';
 
 import {
     Route,
     Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 /**
  * App Component is the highest level real component in the application, it is the parent of the routes and an
- * an ancestors of all other compoents
+ * an ancestors of all other components
  */
 const AppDisplay =  ()=>(
     <div>
@@ -18,6 +19,9 @@ const AppDisplay =  ()=>(
             <Link to={`/`}>
                 <h1>Isomorphic React</h1>
             </Link>
+        </div>
+        <div>
+            <NotificationViewer />
         </div>
 
         {/*Specify a route for the main page which renders when the path is empty*/}
